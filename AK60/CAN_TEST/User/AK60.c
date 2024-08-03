@@ -1,6 +1,16 @@
 #include "AK60.h"
 
 
+struct AK60_Motor
+{
+	float Posation;
+	int32_t Speed;
+	float Current;
+	int8_t Temperature;
+	uint8_t error;
+};
+
+
 void AK60_CAN_Transmit(uint16_t ID, enum AK60_Control_Mode Mode, const uint8_t *Data, uint8_t len)
 {
 	if(len > 8) len = 8;
@@ -15,13 +25,13 @@ void AK60_CAN_Transmit(uint16_t ID, enum AK60_Control_Mode Mode, const uint8_t *
 	HAL_CAN_AddTxMessage(&hcan1,&Can_Tx,Data,&pTxMailbox);
 }
 
-void AK60_DutyMode(uint16_t ID, float Duty)
+void AK60_dutyMode(uint16_t ID, float Duty)
 {
 
 }
 
 
-void Ak60_CurrentLoopMode(uint8_t ID, float Current)
+void Ak60_currentLoopMode(uint8_t ID, float Current)
 {
 	if(Current < -60) Current = -60;
 	else if(Current > 60) Current = 60;
@@ -38,7 +48,7 @@ void Ak60_CurrentLoopMode(uint8_t ID, float Current)
 }
 
 
-void AK60_BreakMode(uint8_t ID, float BreakCurrent)
+void AK60_breakMode(uint8_t ID, float BreakCurrent)
 {
 	if(BreakCurrent > 60) BreakCurrent = 60;
 	else if(BreakCurrent < 0) BreakCurrent = 0;
@@ -55,7 +65,7 @@ void AK60_BreakMode(uint8_t ID, float BreakCurrent)
 }
 
 
-void AK60_SpeedLoopMode(uint8_t ID, float Speed)
+void AK60_speedLoopMode(uint8_t ID, float Speed)
 {
 	int32_t Speed_buff = Speed * 6 * 14;
 	if(Speed_buff > 100000) Speed_buff = 100000;
@@ -71,7 +81,7 @@ void AK60_SpeedLoopMode(uint8_t ID, float Speed)
 }
 
 
-void AK60_PosationMode(uint8_t ID, float posation)
+void AK60_posationMode(uint8_t ID, float posation)
 {
 	if(posation > 36000) posation = 36000;
 	else if(posation < -36000) posation = -36000;
@@ -83,14 +93,14 @@ void AK60_PosationMode(uint8_t ID, float posation)
 }
 
 
-void AK60_SetOriginMode(uint8_t ID)
+void AK60_setOriginMode(uint8_t ID)
 {
 	uint8_t buff = 0;
 	AK60_CAN_Transmit(ID, SetOriginMode, &buff, 1);
 }
 
 
-void AK60_PositionSpeedMode(uint8_t ID, float posation, int32_t Speed, int32_t Acceleration)
+void AK60_positionSpeedMode(uint8_t ID, float posation, int32_t Speed, int32_t Acceleration)
 {
 	if(posation > 36000) posation = 36000;
 	else if(posation < -36000) posation = -36000;
@@ -112,7 +122,7 @@ void AK60_PositionSpeedMode(uint8_t ID, float posation, int32_t Speed, int32_t A
 }
 
 
-void AK_AnalysisData(uint8_t* Data, struct AK60_Motor* AK60_Motor)
+void AK60_analysisData(uint8_t* Data, struct AK60_Motor* AK60_Motor)
 {
 	AK60_Motor->Posation = ((Data[0] << 8) | Data[1]) / 10;
 	AK60_Motor->Speed = ((Data[2] << 8) | Data[3]) * 10;

@@ -1,6 +1,6 @@
 Dependencies for Project 'CAN_TEST', Target 'CAN_TEST': (DO NOT MODIFY !)
 F (startup_stm32f427xx.s)(0x66A4E1E7)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_CAN_TEST-ID:\Installation\51\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Installation\51\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F427xx SETA 1"--list startup_stm32f427xx.lst --xref -o can_test\startup_stm32f427xx.o --depend can_test\startup_stm32f427xx.d)
-F (../Core/Src/main.c)(0x66A990E9)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\User-I.\RTE\_CAN_TEST-ID:\Installation\51\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Installation\51\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o can_test\main.o --omf_browse can_test\main.crf --depend can_test\main.d)
+F (../Core/Src/main.c)(0x66AE55EC)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\User-I.\RTE\_CAN_TEST-ID:\Installation\51\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Installation\51\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o can_test\main.o --omf_browse can_test\main.crf --depend can_test\main.d)
 I (../Core/Inc/main.h)(0x66A4E096)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x65E871AB)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66A4E096)
@@ -32,7 +32,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x65E871AB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x65E871AB)
 I (../Core/Inc/can.h)(0x66A4E095)
 I (../Core/Inc/gpio.h)(0x66A4E095)
-I (..\User\AK60.h)(0x66ACFD7E)
+I (..\User\AK60.h)(0x66AE55EC)
 F (../Core/Src/gpio.c)(0x66A4E095)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\User-I.\RTE\_CAN_TEST-ID:\Installation\51\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Installation\51\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o can_test\gpio.o --omf_browse can_test\gpio.crf --depend can_test\gpio.d)
 I (../Core/Inc/gpio.h)(0x66A4E095)
 I (../Core/Inc/main.h)(0x66A4E096)
@@ -649,8 +649,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x65E871AB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x65E871AB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x65E871AB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x65E871AB)
-F (..\User\AK60.c)(0x66ACFD7E)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\User-I.\RTE\_CAN_TEST-ID:\Installation\51\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Installation\51\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o can_test\ak60.o --omf_browse can_test\ak60.crf --depend can_test\ak60.d)
-I (..\User\AK60.h)(0x66ACFD7E)
+F (..\User\AK60.c)(0x66AE55EC)(--c99 -c --cpu Cortex-M4.fp -D__EVAL -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\User-I.\RTE\_CAN_TEST-ID:\Installation\51\Keil\ARM\PACK\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\Installation\51\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx-o can_test\ak60.o --omf_browse can_test\ak60.crf --depend can_test\ak60.d)
+I (..\User\AK60.h)(0x66AE55EC)
 I (../Core/Inc/main.h)(0x66A4E096)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x65E871AB)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x66A4E096)
@@ -682,4 +682,4 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x65E871AB)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x65E871AB)
 I (../Core/Inc/can.h)(0x66A4E095)
 I (../Core/Inc/gpio.h)(0x66A4E095)
-F (..\User\AK60.h)(0x66ACFD7E)()
+F (..\User\AK60.h)(0x66AE55EC)()

@@ -21,18 +21,24 @@ Target DLL:      CMSIS_AGDI.dll V1.28.3.0
 Dialog DLL:      TCM.DLL V1.32.0.0
  
 <h2>Project:</h2>
-D:\Project\Project_32\AK60\CAN_TEST\MDK-ARM\CAN_TEST.uvprojx
+D:\Project\Project_Motor\AK60\CAN_TEST\MDK-ARM\CAN_TEST.uvprojx
 Project File Date:  07/27/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\Installation\51\Keil\ARM\ARMCC\Bin'
 Build target 'CAN_TEST'
 compiling main.c...
+..\User\AK60.h(51): warning:  #231-D: declaration is not visible outside of function
+  void AK_snalysisData(uint8_t* Data, struct AK60_Motor* AK60_Motor);
+../Core/Src/main.c: 1 warning, 0 errors
 compiling AK60.c...
+..\User\AK60.h(51): warning:  #231-D: declaration is not visible outside of function
+  void AK_snalysisData(uint8_t* Data, struct AK60_Motor* AK60_Motor);
+..\User\AK60.c: 1 warning, 0 errors
 linking...
-Program Size: Code=4662 RO-data=478 RW-data=16 ZI-data=1672  
+Program Size: Code=4538 RO-data=478 RW-data=16 ZI-data=1672  
 FromELF: creating hex file...
-"CAN_TEST\CAN_TEST.axf" - 0 Error(s), 0 Warning(s).
+"CAN_TEST\CAN_TEST.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 

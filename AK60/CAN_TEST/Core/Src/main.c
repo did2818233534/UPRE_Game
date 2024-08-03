@@ -87,15 +87,14 @@ int main(void)
   MX_GPIO_Init();
   MX_CAN1_Init();
   /* USER CODE BEGIN 2 */
-	AK60_SetOriginMode(1);
+	//AK60_setOriginMode(1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		
-		AK60_PositionSpeedMode(1, 360, 100, 10);
+		AK60_speedLoopMode(0,600);
 		HAL_Delay(100);
     /* USER CODE END WHILE */
 
