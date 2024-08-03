@@ -18,4 +18,4 @@ void AK60_positionSpeedMode(uint8_t ID, float Posation, int32_t Speed, int32_t A
 
 void AK60_posationMode(uint8_t ID, float Posation);
 
-速度单位为rmp,加速度单位为rmp/s,角度单位为弧度,电流环不常用,单位暂无
+速度单位为rmp,加速度单位为rmp/s,角度单位为角度,电流环不常用,单位暂无
